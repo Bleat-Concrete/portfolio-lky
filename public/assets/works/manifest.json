@@ -1,0 +1,247 @@
+[
+  {
+    "slide": 1,
+    "count": 4,
+    "assets": [
+      "/assets/works/slide-01/01-image1.png",
+      "/assets/works/slide-01/02-image2.png",
+      "/assets/works/slide-01/03-image3.png",
+      "/assets/works/slide-01/04-image4.png"
+    ]
+  },
+  {
+    "slide": 2,
+    "count": 1,
+    "assets": [
+      "/assets/works/slide-02/01-image3.png"
+    ]
+  },
+  {
+    "slide": 3,
+    "count": 12,
+    "assets": [
+      "/assets/works/slide-03/01-image5.png",
+      "/assets/works/slide-03/02-image6.png",
+      "/assets/works/slide-03/03-image7.png",
+      "/assets/works/slide-03/04-image8.png",
+      "/assets/works/slide-03/05-image9.png",
+      "/assets/works/slide-03/06-image10.png",
+      "/assets/works/slide-03/07-image11.png",
+      "/assets/works/slide-03/08-image12.png",
+      "/assets/works/slide-03/09-image13.png",
+      "/assets/works/slide-03/10-image14.png",
+      "/assets/works/slide-03/11-image15.png",
+      "/assets/works/slide-03/12-image16.png"
+    ]
+  },
+  {
+    "slide": 4,
+    "count": 4,
+    "assets": [
+      "/assets/works/slide-04/01-image5.png",
+      "/assets/works/slide-04/02-image6.png",
+      "/assets/works/slide-04/03-image7.png",
+      "/assets/works/slide-04/04-image17.png"
+    ]
+  },
+  {
+    "slide": 5,
+    "count": 11,
+    "assets": [
+      "/assets/works/slide-05/01-image18.png",
+      "/assets/works/slide-05/02-image19.png",
+      "/assets/works/slide-05/03-image20.png",
+      "/assets/works/slide-05/04-image21.png",
+      "/assets/works/slide-05/05-image22.png",
+      "/assets/works/slide-05/06-image23.png",
+      "/assets/works/slide-05/07-image24.png",
+      "/assets/works/slide-05/08-image25.png",
+      "/assets/works/slide-05/09-image26.png",
+      "/assets/works/slide-05/10-image27.png",
+      "/assets/works/slide-05/11-image28.png"
+    ]
+  },
+  {
+    "slide": 6,
+    "count": 36,
+    "assets": [
+      "/assets/works/slide-06/01-image29.png",
+      "/assets/works/slide-06/02-image30.png",
+      "/assets/works/slide-06/03-image31.png",
+      "/assets/works/slide-06/04-image32.png",
+      "/assets/works/slide-06/05-image33.png",
+      "/assets/works/slide-06/06-image34.png",
+      "/assets/works/slide-06/07-image35.png",
+      "/assets/works/slide-06/08-image36.png",
+      "/assets/works/slide-06/09-image37.png",
+      "/assets/works/slide-06/10-image38.png",
+      "/assets/works/slide-06/11-image39.png",
+      "/assets/works/slide-06/12-image40.gif",
+      "/assets/works/slide-06/13-image41.png",
+      "/assets/works/slide-06/14-image42.png",
+      "/assets/works/slide-06/15-image43.png",
+      "/assets/works/slide-06/16-image44.png",
+      "/assets/works/slide-06/17-image45.png",
+      "/assets/works/slide-06/18-image46.png",
+      "/assets/works/slide-06/19-image47.png",
+      "/assets/works/slide-06/20-image48.png",
+      "/assets/works/slide-06/21-image49.png",
+      "/assets/works/slide-06/22-image50.png",
+      "/assets/works/slide-06/23-image51.png",
+      "/assets/works/slide-06/24-image52.png",
+      "/assets/works/slide-06/25-image53.png",
+      "/assets/works/slide-06/26-image54.png",
+      "/assets/works/slide-06/27-image55.png",
+      "/assets/works/slide-06/28-image56.png",
+      "/assets/works/slide-06/29-image57.png",
+      "/assets/works/slide-06/30-image58.png",
+      "/assets/works/slide-06/31-image59.png",
+      "/assets/works/slide-06/32-image60.png",
+      "/assets/works/slide-06/33-image61.png",
+      "/assets/works/slide-06/34-image62.png",
+      "/assets/works/slide-06/35-image63.png",
+      "/assets/works/slide-06/36-image64.png"
+    ]
+  },
+  {
+    "slide": 7,
+    "count": 9,
+    "assets": [
+      "/assets/works/slide-07/01-image65.png",
+      "/assets/works/slide-07/02-image66.png",
+      "/assets/works/slide-07/03-image67.png",
+      "/assets/works/slide-07/04-image68.png",
+      "/assets/works/slide-07/05-image69.png",
+      "/assets/works/slide-07/06-image70.png",
+      "/assets/works/slide-07/07-image71.png",
+      "/assets/works/slide-07/08-image72.png",
+      "/assets/works/slide-07/09-image73.png"
+    ]
+  },
+  {
+    "slide": 8,
+    "count": 5,
+    "assets": [
+      "/assets/works/slide-08/01-image29.png",
+      "/assets/works/slide-08/02-image30.png",
+      "/assets/works/slide-08/03-image31.png",
+      "/assets/works/slide-08/04-image74.png",
+      "/assets/works/slide-08/05-image75.png"
+    ]
+  },
+  {
+    "slide": 9,
+    "count": 6,
+    "assets": [
+      "/assets/works/slide-09/01-image76.png",
+      "/assets/works/slide-09/02-image77.png",
+      "/assets/works/slide-09/03-image78.png",
+      "/assets/works/slide-09/04-image79.png",
+      "/assets/works/slide-09/05-image80.png",
+      "/assets/works/slide-09/06-image81.png"
+    ]
+  },
+  {
+    "slide": 10,
+    "count": 23,
+    "assets": [
+      "/assets/works/slide-10/01-image76.png",
+      "/assets/works/slide-10/02-image77.png",
+      "/assets/works/slide-10/03-image78.png",
+      "/assets/works/slide-10/04-image82.png",
+      "/assets/works/slide-10/05-image83.png",
+      "/assets/works/slide-10/06-image84.png",
+      "/assets/works/slide-10/07-image85.png",
+      "/assets/works/slide-10/08-image86.png",
+      "/assets/works/slide-10/09-image87.png",
+      "/assets/works/slide-10/10-image88.png",
+      "/assets/works/slide-10/11-image89.png",
+      "/assets/works/slide-10/12-image90.png",
+      "/assets/works/slide-10/13-image91.png",
+      "/assets/works/slide-10/14-image92.png",
+      "/assets/works/slide-10/15-image93.png",
+      "/assets/works/slide-10/16-image94.png",
+      "/assets/works/slide-10/17-image95.png",
+      "/assets/works/slide-10/18-image96.png",
+      "/assets/works/slide-10/19-image97.png",
+      "/assets/works/slide-10/20-image98.png",
+      "/assets/works/slide-10/21-image99.png",
+      "/assets/works/slide-10/22-image100.png",
+      "/assets/works/slide-10/23-image101.png"
+    ]
+  },
+  {
+    "slide": 11,
+    "count": 6,
+    "assets": [
+      "/assets/works/slide-11/01-image102.png",
+      "/assets/works/slide-11/02-image103.png",
+      "/assets/works/slide-11/03-image104.png",
+      "/assets/works/slide-11/04-image105.png",
+      "/assets/works/slide-11/05-image106.png",
+      "/assets/works/slide-11/06-image107.png"
+    ]
+  },
+  {
+    "slide": 12,
+    "count": 8,
+    "assets": [
+      "/assets/works/slide-12/01-image1.png",
+      "/assets/works/slide-12/02-image4.png",
+      "/assets/works/slide-12/03-image3.png",
+      "/assets/works/slide-12/04-image108.png",
+      "/assets/works/slide-12/05-image109.png",
+      "/assets/works/slide-12/06-image110.png",
+      "/assets/works/slide-12/07-image111.png",
+      "/assets/works/slide-12/08-image112.png"
+    ]
+  },
+  {
+    "slide": 13,
+    "count": 10,
+    "assets": [
+      "/assets/works/slide-13/01-image113.png",
+      "/assets/works/slide-13/02-image114.png",
+      "/assets/works/slide-13/03-image115.png",
+      "/assets/works/slide-13/04-image116.png",
+      "/assets/works/slide-13/05-image117.png",
+      "/assets/works/slide-13/06-image118.png",
+      "/assets/works/slide-13/07-image119.png",
+      "/assets/works/slide-13/08-image120.png",
+      "/assets/works/slide-13/09-image121.png",
+      "/assets/works/slide-13/10-image122.png"
+    ]
+  },
+  {
+    "slide": 14,
+    "count": 16,
+    "assets": [
+      "/assets/works/slide-14/01-image113.png",
+      "/assets/works/slide-14/02-image114.png",
+      "/assets/works/slide-14/03-image123.jpeg",
+      "/assets/works/slide-14/04-image124.jpeg",
+      "/assets/works/slide-14/05-image125.jpeg",
+      "/assets/works/slide-14/06-image126.png",
+      "/assets/works/slide-14/07-image127.jpeg",
+      "/assets/works/slide-14/08-image128.jpeg",
+      "/assets/works/slide-14/09-image129.png",
+      "/assets/works/slide-14/10-image130.jpeg",
+      "/assets/works/slide-14/11-image131.jpeg",
+      "/assets/works/slide-14/12-image132.jpeg",
+      "/assets/works/slide-14/13-image133.jpeg",
+      "/assets/works/slide-14/14-image134.png",
+      "/assets/works/slide-14/15-image135.jpeg",
+      "/assets/works/slide-14/16-image136.jpeg"
+    ]
+  },
+  {
+    "slide": 15,
+    "count": 4,
+    "assets": [
+      "/assets/works/slide-15/01-image1.png",
+      "/assets/works/slide-15/02-image2.png",
+      "/assets/works/slide-15/03-image3.png",
+      "/assets/works/slide-15/04-image4.png"
+    ]
+  }
+]

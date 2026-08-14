@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+coverage
+
+# Logs
+*.log
+logs
+
+# Local env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# agent-spec 渲染产物
+# agent-spec 运行时审查产物（不入库）
+.agents-md-review.md

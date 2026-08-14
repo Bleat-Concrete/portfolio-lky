@@ -1,0 +1,14 @@
+{
+  "baselineVersion": "0.4.0",
+  "files": [
+    ".agents/skills/agent-spec-conventions/SKILL.md",
+    ".agents/skills/agent-spec-failure-mode-dict/SKILL.md",
+    ".agents/skills/agent-spec-ratchet-discipline/SKILL.md",
+    ".claude/hooks/agents-md-review.py",
+    ".claude/skills/agent-spec-conventions/SKILL.md",
+    ".claude/skills/agent-spec-failure-mode-dict/SKILL.md",
+    ".claude/skills/agent-spec-ratchet-discipline/SKILL.md",
+    ".codex/hooks/agents-md-review.py"
+  ],
+  "mcpServers": {}
+}

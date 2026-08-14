@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:
+    "Cascadia Mono", "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #06162f;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #06162f;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(244, 114, 182, 0.45);
+  color: #ffffff;
+}
+
+* {
+  scrollbar-color: rgba(34, 211, 238, 0.55) rgba(6, 22, 47, 0.92);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06162f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #22d3ee, #f472b6);
+  border: 2px solid #06162f;
+}
+
+::-webkit-scrollbar-corner {
+  background: #06162f;
+}
+
+@keyframes orbitSlide {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

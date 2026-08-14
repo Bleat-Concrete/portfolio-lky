@@ -1,0 +1,15 @@
+---
+description: Product prototype React project rules
+globs:
+  - "src/**/*.{ts,tsx}"
+alwaysApply: true
+---
+
+# Product Prototype Rules
+
+- Keep the template lightweight: do not add Zustand, ahooks, axios, Ant Design, or another UI library unless the current task clearly needs it.
+- Use React 19, TypeScript, React Router, Vite, and Tailwind CSS.
+- Prefer route-level prototypes and small page components over premature shared abstractions.
+- Use named exports. Avoid default exports.
+- Use `@/` for cross-directory imports.
+- Keep prototype code clearly marked and delete or absorb it once the product question is answered.

@@ -1,0 +1,11 @@
+{
+  "projectName": "portfolio",
+  "positioning": "nexus-cli prototype 模板（生成的项目请按实际改写本行与命令）",
+  "baselineVersion": "0.4.0",
+  "projAbbr": "PROT",
+  "commands": {},
+  "agents": [
+    "claude",
+    "codex"
+  ]
+}

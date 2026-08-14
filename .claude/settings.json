@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/agents-md-review.py",
+            "timeout": 300,
+            "statusMessage": "Reviewing AGENTS.md against this session's diff"
+          }
+        ]
+      }
+    ]
+  }
+}
