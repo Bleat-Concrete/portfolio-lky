@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { findItem, t, type Locale } from "@/data/portfolio";
+import { assetUrl, findItem, t, type Locale } from "@/data/portfolio";
 
 type WorkDetailPageProps = {
   locale: Locale;
@@ -246,7 +246,7 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
                         className="grid gap-4 border border-cyan-300/15 bg-[#06162f]/80 p-3 sm:grid-cols-[180px_1fr]"
                       >
                         <img
-                          src={character.image}
+                          src={assetUrl(character.image)}
                           alt={t(character.name, locale)}
                           className="h-64 w-full border border-cyan-300/15 bg-[#020817] object-contain sm:h-56"
                         />
@@ -296,7 +296,7 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
               {item.gallery.map((src) => (
                 <img
                   key={src}
-                  src={src}
+                  src={assetUrl(src)}
                   alt=""
                   className={`w-full object-contain ${
                     item.slug === "board-game" || item.slug === "ballot-battleground"
