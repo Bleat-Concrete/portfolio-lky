@@ -37,7 +37,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: GITHUB_PAGES=true pnpm run build
+        run: pnpm run build
 
       - name: Add SPA fallback
         run: cp dist/index.html dist/404.html
