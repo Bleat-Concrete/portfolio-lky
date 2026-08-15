@@ -1,5 +1,9 @@
 export type Locale = "zh" | "en";
 
+export function assetUrl(path: string) {
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+}
+
 export type LocalizedText = {
   zh: string;
   en: string;
