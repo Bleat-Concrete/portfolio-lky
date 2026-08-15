@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
+  assetUrl,
   categoryTabs,
   portfolioItems,
   t,
@@ -483,7 +484,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
                     {item.gallery.map((src) => (
                       <img
                         key={src}
-                        src={src}
+                        src={assetUrl(src)}
                         alt=""
                         className="w-full border border-cyan-300/15 bg-[#020817] object-contain"
                       />
@@ -510,7 +511,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
                     {item.coverGallery.slice(0, 3).map((src) => (
                       <img
                         key={src}
-                        src={src}
+                        src={assetUrl(src)}
                         alt=""
                         className="h-full w-full bg-[#020817] object-contain opacity-90"
                       />
@@ -518,7 +519,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
                   </div>
                 ) : item.image ? (
                   <img
-                    src={item.image}
+                    src={assetUrl(item.image)}
                     alt=""
                     className="mb-4 aspect-video w-full border border-cyan-300/15 bg-[#06162f] object-contain opacity-85"
                   />
@@ -527,7 +528,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
                     {item.gallery.slice(0, 4).map((src, index) => (
                       <img
                         key={src}
-                        src={src}
+                        src={assetUrl(src)}
                         alt=""
                         className={`h-full w-full bg-[#020817] object-contain opacity-90 ${
                           index === 0 && item.gallery!.length < 3
