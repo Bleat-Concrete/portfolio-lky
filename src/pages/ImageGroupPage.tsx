@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { portfolioItems, t, type Locale } from "@/data/portfolio";
+import { assetUrl, portfolioItems, t, type Locale } from "@/data/portfolio";
 
 type ImageGroupPageProps = {
   locale: Locale;
@@ -81,7 +81,7 @@ export function ImageGroupPage({ locale, setLocale }: ImageGroupPageProps) {
           {group.images.map((src) => (
             <img
               key={src}
-              src={src}
+              src={assetUrl(src)}
               alt=""
               className={`w-full border border-cyan-300/15 bg-[#020817] object-contain ${
                 group.slug === "meme" ? "mb-4 break-inside-avoid" : "aspect-video"
