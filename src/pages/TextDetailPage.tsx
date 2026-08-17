@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import textData from "@/data/textWorks.json";
-import type { Locale } from "@/data/portfolio";
+import { assetUrl, type Locale } from "@/data/portfolio";
 
 type TextBlock = {
   text: string;
@@ -14,6 +14,8 @@ type RichParagraph = {
   align: "left" | "center";
   runs: TextBlock[];
   isBlank?: boolean;
+  image?: string;
+  alt?: string;
 };
 
 type TextWork = {
@@ -45,6 +47,19 @@ const relatedGameByTextSlug: Record<string, { title: string; href: string; note:
 };
 
 function RichParagraphView({ paragraph }: { paragraph: RichParagraph }) {
+  if (paragraph.image) {
+    return (
+      <figure className="my-5 overflow-hidden border border-cyan-300/20 bg-[#06162f]/70 p-2">
+        <img
+          src={assetUrl(paragraph.image)}
+          alt={paragraph.alt ?? "文本插图"}
+          loading="lazy"
+          className="mx-auto max-h-[72vh] w-auto max-w-full object-contain"
+        />
+      </figure>
+    );
+  }
+
   if (paragraph.isBlank) {
     return <div aria-hidden="true" className="h-[1lh]" />;
   }

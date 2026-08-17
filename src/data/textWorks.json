@@ -3688,9 +3688,10 @@
         },
         {
           "text": "",
-          "align": "left",
+          "align": "center",
           "runs": [],
-          "isBlank": true
+          "image": "/assets/texts/text-02/01-image1.jpg",
+          "alt": "北出川十七角色q版立绘"
         },
         {
           "text": "尸体发现时CG：",
@@ -3706,9 +3707,10 @@
         },
         {
           "text": "",
-          "align": "left",
+          "align": "center",
           "runs": [],
-          "isBlank": true
+          "image": "/assets/texts/text-02/02-image2.jpg",
+          "alt": "尸体发现时CG"
         },
         {
           "text": "死亡地点：教学楼二层茶水间",
@@ -3772,9 +3774,10 @@
         },
         {
           "text": "",
-          "align": "left",
+          "align": "center",
           "runs": [],
-          "isBlank": true
+          "image": "/assets/texts/text-02/03-image3.jpg",
+          "alt": "教学楼一层建筑图"
         },
         {
           "text": "二层：",
@@ -3790,9 +3793,10 @@
         },
         {
           "text": "",
-          "align": "left",
+          "align": "center",
           "runs": [],
-          "isBlank": true
+          "image": "/assets/texts/text-02/04-image4.jpg",
+          "alt": "教学楼二层建筑图"
         },
         {
           "text": "",
