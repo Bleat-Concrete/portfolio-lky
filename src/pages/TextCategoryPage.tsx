@@ -1,6 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import textData from "@/data/textWorks.json";
 import type { Locale } from "@/data/portfolio";
+import {
+  textCategoryOverview,
+  textCategoryTitle,
+  textTagLabel,
+  textWorkSummary,
+  textWorkTitle,
+} from "@/data/textTranslations";
 
 type TextWork = {
   slug: string;
@@ -78,10 +85,13 @@ export function TextCategoryPage({ locale, setLocale }: TextCategoryPageProps) {
             Text Class
           </p>
           <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-6xl">
-            {category.title}
+            {textCategoryTitle(category.slug, category.title, locale)}
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-            {category.description || category.title}
+            {textCategoryOverview(
+              category.description || category.title,
+              locale
+            )}
           </p>
         </section>
 
@@ -92,19 +102,21 @@ export function TextCategoryPage({ locale, setLocale }: TextCategoryPageProps) {
               to={`/texts/${work.slug}`}
               className="border border-cyan-300/20 bg-[#081b38]/70 p-5 no-underline transition hover:-translate-y-1 hover:border-pink-300/70"
             >
-              <h2 className="text-2xl font-black text-white">{work.title}</h2>
+              <h2 className="text-2xl font-black text-white">
+                {textWorkTitle(work.slug, work.title, locale)}
+              </h2>
               <div className="mt-3 flex flex-wrap gap-2">
                 {work.tags.map((tag) => (
                   <span
                     key={tag}
                     className="border border-pink-300/35 bg-pink-300/10 px-2 py-1 font-mono text-xs text-pink-100"
                   >
-                    #{tag}
+                    #{textTagLabel(tag, locale)}
                   </span>
                 ))}
               </div>
               <p className="mt-4 line-clamp-4 text-sm leading-7 text-slate-300">
-                {work.summary}
+                {textWorkSummary(work.slug, work.summary, locale)}
               </p>
             </Link>
           ))}

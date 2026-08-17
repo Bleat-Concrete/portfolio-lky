@@ -9,6 +9,7 @@ import {
   type PortfolioCategory,
   type PortfolioItem,
 } from "@/data/portfolio";
+import { textCategoryTitle, textTagLabel } from "@/data/textTranslations";
 import textData from "@/data/textWorks.json";
 
 type HomePageProps = {
@@ -340,7 +341,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
                     </p>
                   </div>
                   <h3 className="mt-4 text-3xl font-black text-white">
-                    {category.title}
+                    {textCategoryTitle(category.slug, category.title, locale)}
                   </h3>
                   {tags.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-2">
@@ -349,7 +350,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
                           key={tag}
                           className="border border-pink-300/35 bg-pink-300/10 px-2 py-1 font-mono text-xs text-pink-100"
                         >
-                          #{tag}
+                          #{textTagLabel(tag, locale)}
                         </span>
                       ))}
                     </div>
@@ -380,7 +381,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
                       key={tag}
                       className="border border-pink-300/35 bg-pink-300/10 px-2 py-1 font-mono text-xs text-pink-100"
                     >
-                      {tag}
+                      {textTagLabel(tag, locale)}
                     </span>
                   ))}
                 </div>

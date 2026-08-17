@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import textData from "@/data/textWorks.json";
 import { assetUrl, type Locale } from "@/data/portfolio";
+import { textTagLabel, textWorkSummary } from "@/data/textTranslations";
 
 type TextBlock = {
   text: string;
@@ -154,7 +155,7 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
             {work.title}
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-            {work.summary}
+            {textWorkSummary(work.slug, work.summary, locale)}
           </p>
           {relatedGame ? (
             <Link
@@ -174,7 +175,7 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
                 key={tag}
                 className="border border-pink-300/40 bg-pink-300/10 px-3 py-1 font-mono text-sm text-pink-100"
               >
-                #{tag}
+                #{textTagLabel(tag, locale)}
               </span>
             ))}
           </div>
