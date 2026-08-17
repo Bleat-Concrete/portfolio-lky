@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { assetUrl, findItem, t, type Locale } from "@/data/portfolio";
 
 type WorkDetailPageProps = {
@@ -32,6 +32,7 @@ function isVideoLink(label: string, url: string) {
 
 export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
   const { slug = "" } = useParams();
+  const location = useLocation();
   const item = findItem(slug);
   const videoLinks =
     item?.links
@@ -60,6 +61,7 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
   }
 
   const playableSrc = item.playableUrl ? assetUrl(item.playableUrl) : undefined;
+  const backTo = (location.state as { backTo?: string } | null)?.backTo ?? "/#works";
 
   return (
     <main className="min-h-screen bg-[#06162f] text-slate-100">
@@ -67,7 +69,7 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
       <div className="relative mx-auto w-full max-w-[96rem] px-3 py-8 sm:px-4">
         <header className="flex items-center justify-between gap-4 border-b border-cyan-300/20 pb-5">
           <Link
-            to="/#works"
+            to={backTo}
             className="font-mono text-sm uppercase tracking-[0.22em] text-cyan-200 no-underline hover:text-pink-200"
           >
             Back / 返回
@@ -132,6 +134,7 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
                 <Link
                   key={link.url}
                   to={link.url}
+                  state={{ backTo: `/games/${item.slug}` }}
                   className="border border-cyan-300/40 px-4 py-3 font-mono text-sm text-cyan-100 no-underline hover:border-pink-300 hover:text-pink-100"
                 >
                   {t(link.label, locale)}

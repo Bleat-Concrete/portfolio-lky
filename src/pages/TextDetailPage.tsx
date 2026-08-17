@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import textData from "@/data/textWorks.json";
 import { assetUrl, type Locale } from "@/data/portfolio";
 import { textTagLabel, textWorkSummary } from "@/data/textTranslations";
@@ -99,6 +99,7 @@ function RichParagraphView({ paragraph }: { paragraph: RichParagraph }) {
 
 export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
   const { slug = "" } = useParams();
+  const location = useLocation();
   const work = works.find((item) => item.slug === slug);
 
   if (!work) {
@@ -118,13 +119,16 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
   const siblingWorks = works.filter((item) => item.category === work.category);
   const hasIntro = work.intro.some((paragraph) => !paragraph.isBlank);
   const relatedGame = relatedGameByTextSlug[work.slug];
+  const backTo =
+    (location.state as { backTo?: string } | null)?.backTo ??
+    `/texts/category/${work.category}`;
   return (
     <main className="min-h-screen bg-[#06162f] text-slate-100">
       <div className="fixed inset-0 pointer-events-none bg-[linear-gradient(rgba(34,211,238,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.035)_1px,transparent_1px)] bg-[size:30px_30px]" />
       <div className="relative mx-auto w-full max-w-6xl px-5 py-8 sm:px-8">
         <header className="flex items-center justify-between gap-4 border-b border-cyan-300/20 pb-5">
           <Link
-            to="/#works"
+            to={backTo}
             className="font-mono text-sm uppercase tracking-[0.22em] text-cyan-200 no-underline hover:text-pink-200"
           >
             Back / 返回
@@ -160,6 +164,7 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
           {relatedGame ? (
             <Link
               to={relatedGame.href}
+              state={{ backTo: `/texts/${work.slug}` }}
               className="mt-5 inline-flex max-w-sm flex-col border border-cyan-300/30 bg-cyan-300/10 px-4 py-3 no-underline transition hover:border-pink-300/60 hover:bg-pink-300/10"
             >
               <span className="font-mono text-xs uppercase tracking-[0.18em] text-cyan-200">
@@ -192,6 +197,7 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
                   <Link
                     key={item.slug}
                     to={`/texts/${item.slug}`}
+                    state={{ backTo: `/texts/category/${work.category}` }}
                     className={`text-sm no-underline ${
                       item.slug === work.slug
                         ? "text-pink-200"

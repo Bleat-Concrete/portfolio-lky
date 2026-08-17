@@ -87,12 +87,14 @@ export function TextCategoryPage({ locale, setLocale }: TextCategoryPageProps) {
           <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-6xl">
             {textCategoryTitle(category.slug, category.title, locale)}
           </h1>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-            {textCategoryOverview(
-              category.description || category.title,
-              locale
-            )}
-          </p>
+          {locale === "en" ? (
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
+              {textCategoryOverview(
+                category.description || category.title,
+                locale
+              )}
+            </p>
+          ) : null}
         </section>
 
         <section className="grid gap-4 md:grid-cols-2">
@@ -100,6 +102,7 @@ export function TextCategoryPage({ locale, setLocale }: TextCategoryPageProps) {
             <Link
               key={work.slug}
               to={`/texts/${work.slug}`}
+              state={{ backTo: `/texts/category/${category.slug}` }}
               className="border border-cyan-300/20 bg-[#081b38]/70 p-5 no-underline transition hover:-translate-y-1 hover:border-pink-300/70"
             >
               <h2 className="text-2xl font-black text-white">

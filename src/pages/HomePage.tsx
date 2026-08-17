@@ -104,6 +104,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
       maskOfJade && {
         key: maskOfJade.slug,
         path: itemPath(maskOfJade),
+        backTo: "/#top",
         meta: "GGJ HK 2026",
         title: t(maskOfJade.title, locale),
         summary: t(maskOfJade.summary, locale),
@@ -111,6 +112,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
       worldPot && {
         key: worldPot.slug,
         path: itemPath(worldPot),
+        backTo: "/#top",
         meta: locale === "zh" ? "文字游戏" : "Text Game",
         title: t(worldPot.title, locale),
         summary:
@@ -121,8 +123,12 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
       advancedAnimal && {
         key: advancedAnimal.slug,
         path: `/texts/${advancedAnimal.slug}`,
+        backTo: "/#top",
         meta: advancedAnimal.categoryTitle,
-        title: advancedAnimal.title,
+        title:
+          locale === "zh"
+            ? advancedAnimal.title
+            : "Halfway Road, Murder Tune: Higher Animal Tune",
         summary:
           locale === "zh"
             ? "外星从同人文，第二章人物小传。本文风格冷峻而张狂，使用了大量的象征与内心独白，展现了特定精神状态下扭曲的现实感知，意在实现暴力美学。"
@@ -131,6 +137,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
     ].filter(Boolean) as {
       key: string;
       path?: string;
+      backTo?: string;
       meta: string;
       title: string;
       summary: string;
@@ -242,6 +249,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
             <Link
               key={item.key}
               to={item.path ?? "#"}
+              state={item.backTo ? { backTo: item.backTo } : undefined}
               className="group relative flex min-h-36 flex-col overflow-hidden border border-cyan-300/30 bg-[linear-gradient(135deg,rgba(8,27,56,0.86),rgba(8,27,56,0.58)),linear-gradient(90deg,rgba(34,211,238,0.08)_1px,transparent_1px)] bg-[size:auto,12px_12px] p-4 text-left no-underline shadow-[0_0_26px_rgba(34,211,238,0.12),inset_0_0_18px_rgba(244,114,182,0.06)] transition before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-cyan-200 before:to-transparent hover:-translate-y-1 hover:border-pink-300/80 hover:shadow-[0_0_34px_rgba(244,114,182,0.24),0_0_24px_rgba(34,211,238,0.16),inset_0_0_20px_rgba(34,211,238,0.08)]"
             >
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-200">
