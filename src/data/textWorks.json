@@ -73890,8 +73890,20 @@
         "叙事层",
         "命题要素短篇"
       ],
-      "summary": "本文为发布平台活动参赛文（名为：“要素大乱炖：三鲜”），强制要求按照抽取的要素作文。要素关键词如下：",
+      "summary": "本文为发布平台活动参赛文（名为：“要素大乱炖：三鲜”），强制要求按照抽取的要素作文。",
       "intro": [
+        {
+          "text": "要素关键词如下：",
+          "align": "left",
+          "runs": [
+            {
+              "text": "要素关键词如下：",
+              "bold": true,
+              "italic": false,
+              "underline": false
+            }
+          ]
+        },
         {
           "text": "主角：失去人性的雇佣兵",
           "align": "left",
@@ -81413,19 +81425,7 @@
           "align": "left",
           "runs": [
             {
-              "text": "这个项目为",
-              "bold": false,
-              "italic": false,
-              "underline": false
-            },
-            {
-              "text": "模拟经营类文字游戏",
-              "bold": true,
-              "italic": false,
-              "underline": false
-            },
-            {
-              "text": "，叙事丰富，多结局。游戏",
+              "text": "这个项目为模拟经营类文字游戏，叙事丰富，多结局。游戏",
               "bold": false,
               "italic": false,
               "underline": false
@@ -81437,19 +81437,19 @@
               "underline": false
             },
             {
-              "text": "为 12 ",
+              "text": "为 ",
               "bold": false,
               "italic": false,
               "underline": false
             },
             {
-              "text": "个",
-              "bold": false,
+              "text": "6",
+              "bold": true,
               "italic": false,
               "underline": false
             },
             {
-              "text": "游戏日，每天分为三个阶段：",
+              "text": " 个游戏日，每天分为三个阶段：",
               "bold": false,
               "italic": false,
               "underline": false

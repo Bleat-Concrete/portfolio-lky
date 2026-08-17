@@ -205,7 +205,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
 
       <section
         id="top"
-        className="relative mx-auto flex w-full max-w-6xl flex-col px-5 pb-4 pt-16 sm:px-8"
+        className="relative mx-auto flex w-full max-w-6xl flex-col px-5 pb-6 pt-20 sm:px-8"
       >
         <div className="max-w-4xl">
           <p className="font-mono text-sm uppercase tracking-[0.32em] text-pink-300">
@@ -251,7 +251,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
           </div>
         </div>
 
-        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+        <div className="mt-7 grid gap-3 sm:grid-cols-3">
           {featuredItems.map((item) => (
             <Link
               key={item.key}

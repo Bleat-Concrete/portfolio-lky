@@ -141,13 +141,6 @@ export const portfolioItems: PortfolioItem[] = [
           en: "Enter another mind, alter cognition, resolve conflict, and redirect attention. The player changes a character's reality from within.",
         },
       },
-      {
-        title: { zh: "迁移备注", en: "Migration Notes" },
-        body: {
-          zh: "第二步需要补充实机截图源图、角色设计原文与完整项目说明。",
-          en: "Next step: replace PDF previews with source screenshots, character notes, and the full project write-up.",
-        },
-      },
     ],
   },
   {
