@@ -2,6 +2,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import textData from "@/data/textWorks.json";
 import { assetUrl, type Locale } from "@/data/portfolio";
 import {
+  textCategoryHeading,
   textTagLabel,
   textWorkSummary,
   textWorkTitle,
@@ -210,7 +211,7 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
 
         <section className="py-10">
           <p className="font-mono text-sm uppercase tracking-[0.28em] text-pink-300">
-            {work.categoryTitle}
+            {textCategoryHeading(work.categoryTitle, locale)}
           </p>
           <h1 className="mt-4 text-3xl font-black leading-tight text-white sm:text-5xl">
             {textWorkTitle(work.slug, work.title, locale)}

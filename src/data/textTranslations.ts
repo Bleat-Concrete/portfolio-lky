@@ -42,7 +42,11 @@ const tagTranslations: Record<string, string> = {
   "仿大语言模型": "LLM Simulation",
   "模拟恐怖": "Simulated Horror",
   "规则怪谈": "Rule-Based Horror",
+  "现代背景": "Contemporary Setting",
   "多派系": "Multiple Factions",
+  "架空世界观": "Fictional Worldbuilding",
+  "宗教": "Religion",
+  "群像": "Ensemble Cast",
   "现代幻想": "Contemporary Fantasy",
   "思辨": "Speculative / Philosophical",
   "对话为主短篇": "Dialogue-Driven Short Story",
@@ -56,6 +60,8 @@ const tagTranslations: Record<string, string> = {
   "现代东北": "Contemporary Northeast China",
   "文字模拟经营": "Text Management Sim",
   "多结局": "Multiple Endings",
+  "合作": "Collaboration",
+  "生活流": "Slice of Life",
   "梦核": "Dreamcore",
   "哲学": "Philosophy",
   "现代性": "Modernity",
@@ -77,7 +83,7 @@ const workTitleTranslations: Record<string, string> = {
   "text-13": "Autumn's Shadow Album",
   "text-14": "Interlude: Tide Without Hope",
   "text-15": "TQL Language Model",
-  "text-16": "Multiple Factions",
+  "text-16": "Jiulishan Residential Compound",
   "text-17": "Secondary Growth",
   "text-18": "Revolving Elevator",
   "text-19": "Theory of Everything: Entangled Threads of Fate",
@@ -111,6 +117,23 @@ const workSummaries: Record<string, string> = {
 
 export function textCategoryTitle(slug: string, fallback: string, locale: Locale) {
   return locale === "en" ? categoryTitles[slug] ?? fallback : fallback;
+}
+
+export function textCategoryHeading(title: string, locale: Locale) {
+  if (locale !== "en") return title;
+  const entry = Object.entries(categoryTitles).find(
+    ([slug]) =>
+      slug ===
+      {
+        "游戏文本": "game-writing",
+        "同人文": "fan-fiction",
+        "原创赛博朋克世界观": "cyberpunk-world",
+        "规则怪谈": "rules-horror",
+        "原创小说": "original-fiction",
+        "剧本（英文）": "english-screenplay",
+      }[title]
+  );
+  return entry?.[1] ?? title;
 }
 
 export function textTagLabel(tag: string, locale: Locale) {
