@@ -44,6 +44,11 @@ const relatedGameByTextSlug: Record<string, { title: string; href: string; note:
     href: "/games/vagus",
     note: "查看完整游戏项目页",
   },
+  "text-21": {
+    title: "世界锅",
+    href: "/games/twine-text-game",
+    note: "查看完整游戏项目页",
+  },
 };
 
 function RichParagraphView({ paragraph }: { paragraph: RichParagraph }) {
