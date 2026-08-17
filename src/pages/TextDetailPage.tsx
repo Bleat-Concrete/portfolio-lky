@@ -1,7 +1,11 @@
 import { Link, useLocation, useParams } from "react-router-dom";
 import textData from "@/data/textWorks.json";
 import { assetUrl, type Locale } from "@/data/portfolio";
-import { textTagLabel, textWorkSummary } from "@/data/textTranslations";
+import {
+  textTagLabel,
+  textWorkSummary,
+  textWorkTitle,
+} from "@/data/textTranslations";
 
 type TextBlock = {
   text: string;
@@ -38,6 +42,47 @@ type TextDetailPageProps = {
 };
 
 const works = textData.works as TextWork[];
+
+const englishIntroByTextSlug: Record<string, RichParagraph[]> = {
+  "text-20": [
+    {
+      text: "Core Concept:",
+      align: "left",
+      runs: [
+        {
+          text: "Core Concept:",
+          bold: true,
+          italic: false,
+          underline: false,
+        },
+      ],
+    },
+    {
+      text: "This work tells a warm story about companionship, farewell, and growth. Set between the Hong Kong girl Cloe and the Filipino domestic worker Kajsa, it follows Cloe's coming-of-age process to portray love and support between people, while also revealing the often unseen hardships faced by Filipinos working and living in Hong Kong, reflecting the helplessness and dilemmas within Hong Kong society.",
+      align: "left",
+      runs: [
+        {
+          text: "This work tells a warm story about companionship, farewell, and growth. Set between the Hong Kong girl Cloe and the Filipino domestic worker Kajsa, it follows Cloe's coming-of-age process to portray love and support between people, while also revealing the often unseen hardships faced by Filipinos working and living in Hong Kong, reflecting the helplessness and dilemmas within Hong Kong society.",
+          bold: false,
+          italic: false,
+          underline: false,
+        },
+      ],
+    },
+    {
+      text: "Note: This screenplay was created collaboratively. The full creator list is: Xiaoqing LAN (Even), Yifei CAO (Maggie), Yuyue RONG (Demi), Keyin LIANG (Bleat), and Li Pui Wing (Wakana). Keyin LIANG participated fully in plot design, character design, screenplay writing, and other major parts of the work.",
+      align: "left",
+      runs: [
+        {
+          text: "Note: This screenplay was created collaboratively. The full creator list is: Xiaoqing LAN (Even), Yifei CAO (Maggie), Yuyue RONG (Demi), Keyin LIANG (Bleat), and Li Pui Wing (Wakana). Keyin LIANG participated fully in plot design, character design, screenplay writing, and other major parts of the work.",
+          bold: false,
+          italic: false,
+          underline: false,
+        },
+      ],
+    },
+  ],
+};
 
 const relatedGameByTextSlug: Record<string, { title: string; href: string; note: string }> = {
   "text-01": {
@@ -127,7 +172,9 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
   }
 
   const siblingWorks = works.filter((item) => item.category === work.category);
-  const hasIntro = work.intro.some((paragraph) => !paragraph.isBlank);
+  const displayIntro =
+    locale === "en" ? englishIntroByTextSlug[work.slug] ?? work.intro : work.intro;
+  const hasIntro = displayIntro.some((paragraph) => !paragraph.isBlank);
   const relatedGame = relatedGameByTextSlug[work.slug];
   const backTo =
     (location.state as { backTo?: string } | null)?.backTo ??
@@ -166,7 +213,7 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
             {work.categoryTitle}
           </p>
           <h1 className="mt-4 text-3xl font-black leading-tight text-white sm:text-5xl">
-            {work.title}
+            {textWorkTitle(work.slug, work.title, locale)}
           </h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
             {textWorkSummary(work.slug, work.summary, locale)}
@@ -214,7 +261,7 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
                         : "text-slate-300 hover:text-pink-200"
                     }`}
                   >
-                    {item.title}
+                    {textWorkTitle(item.slug, item.title, locale)}
                   </Link>
                 ))}
               </div>
@@ -231,7 +278,7 @@ export function TextDetailPage({ locale, setLocale }: TextDetailPageProps) {
                   Intro
                 </h2>
                 <div className="mt-4 leading-8 text-slate-300">
-                  {work.intro.map((paragraph, index) => (
+                  {displayIntro.map((paragraph, index) => (
                     <RichParagraphView key={index} paragraph={paragraph} />
                   ))}
                 </div>

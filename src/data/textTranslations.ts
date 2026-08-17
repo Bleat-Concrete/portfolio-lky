@@ -120,6 +120,7 @@ export function textTagLabel(tag: string, locale: Locale) {
 export function textWorkTitle(slug: string, title: string, locale: Locale) {
   if (locale !== "en") return title;
   const translated = workTitleTranslations[slug];
+  if (slug === "text-20") return translated ?? title;
   return translated ? `${title} (${translated})` : title;
 }
 
