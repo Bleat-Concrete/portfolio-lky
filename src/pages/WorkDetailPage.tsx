@@ -59,6 +59,8 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
     );
   }
 
+  const playableSrc = item.playableUrl ? assetUrl(item.playableUrl) : undefined;
+
   return (
     <main className="min-h-screen bg-[#06162f] text-slate-100">
       <div className="fixed inset-0 pointer-events-none bg-[linear-gradient(rgba(34,211,238,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.04)_1px,transparent_1px)] bg-[size:28px_28px]" />
@@ -183,7 +185,7 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
           </section>
         )}
 
-        {item.playableUrl && (
+        {playableSrc && (
           <section className="py-8">
             <div className="mb-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
               <div>
@@ -195,7 +197,7 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
                 </h2>
               </div>
               <a
-                href={item.playableUrl}
+                href={playableSrc}
                 target="_blank"
                 rel="noreferrer"
                 className="font-mono text-sm text-pink-200 no-underline hover:text-pink-100"
@@ -206,7 +208,7 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
             <div className="border border-cyan-300/25 bg-[#020817] p-2 shadow-[0_0_45px_rgba(34,211,238,0.12)]">
               <iframe
                 title={t(item.title, locale)}
-                src={item.playableUrl}
+                src={playableSrc}
                 className="h-[78vh] min-h-[620px] w-full bg-white"
               />
             </div>
