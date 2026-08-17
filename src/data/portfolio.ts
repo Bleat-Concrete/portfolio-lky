@@ -38,6 +38,8 @@ export type PortfolioItem = {
   galleryLayout?: "grid" | "single";
   tallGalleryImages?: string[];
   playableUrl?: string;
+  characterAnimation?: string;
+  characterDesignImages?: string[];
   characterProfiles?: {
     name: LocalizedText;
     image: string;
@@ -354,6 +356,25 @@ export const portfolioItems: PortfolioItem[] = [
         label: { zh: "班级审判环节", en: "Class trial writing" },
         url: "/texts/text-02",
       },
+    ],
+    characterAnimation: "/assets/works/slide-06/12-image40.gif",
+    characterDesignImages: [
+      "/assets/works/slide-06/13-image41.png",
+      "/assets/works/slide-06/14-image42.png",
+      "/assets/works/slide-06/15-image43.png",
+      "/assets/works/slide-06/16-image44.png",
+      "/assets/works/slide-06/17-image45.png",
+      "/assets/works/slide-06/18-image46.png",
+      "/assets/works/slide-06/19-image47.png",
+      "/assets/works/slide-06/20-image48.png",
+      "/assets/works/slide-06/21-image49.png",
+      "/assets/works/slide-06/22-image50.png",
+      "/assets/works/slide-06/23-image51.png",
+      "/assets/works/slide-06/24-image52.png",
+      "/assets/works/slide-06/25-image53.png",
+      "/assets/works/slide-06/26-image54.png",
+      "/assets/works/slide-06/27-image55.png",
+      "/assets/works/slide-06/28-image56.png",
     ],
   },
   {

@@ -276,6 +276,42 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
           </section>
         )}
 
+        {(item.characterAnimation || item.characterDesignImages) && (
+          <section className="py-8">
+            <h2 className="font-mono text-sm uppercase tracking-[0.18em] text-cyan-200">
+              {locale === "zh" ? "角色设计" : "Character Design"}
+            </h2>
+            {item.characterAnimation && (
+              <div className="mt-4">
+                <p className="mb-3 font-mono text-xs uppercase tracking-[0.16em] text-pink-200">
+                  {locale === "zh" ? "主角：" : "Protagonist:"}
+                </p>
+                <img
+                  src={assetUrl(item.characterAnimation)}
+                  alt={locale === "zh" ? "主角动画" : "Protagonist animation"}
+                  className="h-auto w-full bg-[#020817] object-contain sm:w-1/4"
+                />
+              </div>
+            )}
+            {item.characterDesignImages && (
+              <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {item.characterDesignImages.map((src, index) => (
+                  <img
+                    key={src}
+                    src={assetUrl(src)}
+                    alt={
+                      locale === "zh"
+                        ? `角色设计 ${index + 1}`
+                        : `Character design ${index + 1}`
+                    }
+                    className="h-auto w-full bg-[#020817] object-contain"
+                  />
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
         {item.gallery && item.gallery.length > 0 && (
           <section
             className={
@@ -285,7 +321,13 @@ export function WorkDetailPage({ locale, setLocale }: WorkDetailPageProps) {
             }
           >
             <h2 className="font-mono text-sm uppercase tracking-[0.18em] text-cyan-200">
-              {locale === "zh" ? "图片" : "Images"}
+              {item.slug === "pixel-text-avg"
+                ? locale === "zh"
+                  ? "场景搭建"
+                  : "Scene Construction"
+                : locale === "zh"
+                ? "图片"
+                : "Images"}
             </h2>
             <div
               className={`mt-4 grid ${

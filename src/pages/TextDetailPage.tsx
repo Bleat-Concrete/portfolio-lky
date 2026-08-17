@@ -40,6 +40,16 @@ type TextDetailPageProps = {
 const works = textData.works as TextWork[];
 
 const relatedGameByTextSlug: Record<string, { title: string; href: string; note: string }> = {
+  "text-01": {
+    title: "弹丸论破同人游戏",
+    href: "/games/pixel-text-avg",
+    note: "查看完整游戏项目页",
+  },
+  "text-02": {
+    title: "弹丸论破同人游戏",
+    href: "/games/pixel-text-avg",
+    note: "查看完整游戏项目页",
+  },
   "text-03": {
     title: "迷走 Vagus",
     href: "/games/vagus",
