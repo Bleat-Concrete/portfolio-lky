@@ -386,8 +386,8 @@ export const portfolioItems: PortfolioItem[] = [
       {
         title: { zh: "项目机制", en: "Core Loop" },
         body: {
-          zh: "游戏总流程为 12 个游戏日，每天分为直播销售、自由探索和固定事件三个阶段。直播销售阶段处理随机直播事件，在热度、收入、舆论风险和员工状态之间做选择；自由探索阶段通过街区探索、偷听八卦和邻居对话提前获得情报；固定事件阶段直面角色冲突与经营危机。",
-          en: "The game spans 12 in-game days. Each day is divided into livestream sales, free exploration, and fixed story events. Choices affect income, public response, staff condition, relationship values, and later branches.",
+          zh: "游戏总流程为 6 个游戏日，每天分为直播销售、自由探索和固定事件三个阶段。直播销售阶段处理随机直播事件，在热度、收入、舆论风险和员工状态之间做选择；自由探索阶段通过街区探索、偷听八卦和邻居对话提前获得情报；固定事件阶段直面角色冲突与经营危机。",
+          en: "The game spans 6 in-game days. Each day is divided into livestream sales, free exploration, and fixed story events. Choices affect income, public response, staff condition, relationship values, and later branches.",
         },
       },
       {
@@ -426,7 +426,7 @@ export const portfolioItems: PortfolioItem[] = [
         name: { zh: "安德烈", en: "Andrei" },
         image: "/assets/works/world-pot/06-image23.png",
         body: {
-          zh: "乌克兰逃兵，因语言隔阂而阴郁寡言。虽然不被重视、生存堪忧，但只要能在直播间里当吉祥物，算不算被需要，是否就能从扭曲的关系里获得生存的可能性？",
+          zh: "俄罗斯逃兵，因语言隔阂而阴郁寡言。虽然不被重视、生存堪忧，但只要能在直播间里当吉祥物，算不算被需要，是否就能从扭曲的关系里获得生存的可能性？",
           en: "A Russian character who supports the project's absurd humor, cross-cultural jokes, and staff relationship tension.",
         },
       },
