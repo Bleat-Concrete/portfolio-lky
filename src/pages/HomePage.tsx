@@ -191,7 +191,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
 
       <section
         id="top"
-        className="relative mx-auto flex min-h-[64vh] w-full max-w-6xl flex-col px-5 pb-6 pt-20 sm:px-8"
+        className="relative mx-auto flex w-full max-w-6xl flex-col px-5 pb-4 pt-16 sm:px-8"
       >
         <div className="max-w-4xl">
           <p className="font-mono text-sm uppercase tracking-[0.32em] text-pink-300">
@@ -237,12 +237,12 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
           </div>
         </div>
 
-        <div className="mt-7 grid gap-3 sm:grid-cols-3">
+        <div className="mt-5 grid gap-3 sm:grid-cols-3">
           {featuredItems.map((item) => (
             <Link
               key={item.key}
               to={item.path ?? "#"}
-              className="group relative flex min-h-40 flex-col overflow-hidden border border-cyan-300/30 bg-[linear-gradient(135deg,rgba(8,27,56,0.86),rgba(8,27,56,0.58)),linear-gradient(90deg,rgba(34,211,238,0.08)_1px,transparent_1px)] bg-[size:auto,12px_12px] p-4 text-left no-underline shadow-[0_0_26px_rgba(34,211,238,0.12),inset_0_0_18px_rgba(244,114,182,0.06)] transition before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-cyan-200 before:to-transparent hover:-translate-y-1 hover:border-pink-300/80 hover:shadow-[0_0_34px_rgba(244,114,182,0.24),0_0_24px_rgba(34,211,238,0.16),inset_0_0_20px_rgba(34,211,238,0.08)]"
+              className="group relative flex min-h-36 flex-col overflow-hidden border border-cyan-300/30 bg-[linear-gradient(135deg,rgba(8,27,56,0.86),rgba(8,27,56,0.58)),linear-gradient(90deg,rgba(34,211,238,0.08)_1px,transparent_1px)] bg-[size:auto,12px_12px] p-4 text-left no-underline shadow-[0_0_26px_rgba(34,211,238,0.12),inset_0_0_18px_rgba(244,114,182,0.06)] transition before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-cyan-200 before:to-transparent hover:-translate-y-1 hover:border-pink-300/80 hover:shadow-[0_0_34px_rgba(244,114,182,0.24),0_0_24px_rgba(34,211,238,0.16),inset_0_0_20px_rgba(34,211,238,0.08)]"
             >
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-200">
                 {item.meta}

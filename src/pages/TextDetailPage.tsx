@@ -55,12 +55,12 @@ const relatedGameByTextSlug: Record<string, { title: string; href: string; note:
 function RichParagraphView({ paragraph }: { paragraph: RichParagraph }) {
   if (paragraph.image) {
     return (
-      <figure className="my-5 overflow-hidden border border-cyan-300/20 bg-[#06162f]/70 p-2">
+      <figure className="my-4">
         <img
           src={assetUrl(paragraph.image)}
           alt={paragraph.alt ?? "文本插图"}
           loading="lazy"
-          className="mx-auto max-h-[72vh] w-auto max-w-full object-contain"
+          className="mx-auto w-[380px] max-w-full object-contain"
         />
       </figure>
     );
