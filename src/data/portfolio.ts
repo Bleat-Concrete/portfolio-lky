@@ -216,7 +216,7 @@ export const portfolioItems: PortfolioItem[] = [
     links: [
       {
         label: { zh: "游玩演示", en: "Gameplay demo" },
-        url: "https://www.zcool.com.cn/work/ZNzMxNzMxNjQ=.html",
+        url: "https://www.bilibili.com/video/BV1rEbh6aETq/",
       },
     ],
   },
