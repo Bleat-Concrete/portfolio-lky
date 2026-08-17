@@ -190,7 +190,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
 
       <section
         id="top"
-        className="relative mx-auto flex min-h-[78vh] w-full max-w-6xl flex-col justify-center px-5 pb-10 pt-24 sm:px-8"
+        className="relative mx-auto flex min-h-[64vh] w-full max-w-6xl flex-col px-5 pb-6 pt-20 sm:px-8"
       >
         <div className="max-w-4xl">
           <p className="font-mono text-sm uppercase tracking-[0.32em] text-pink-300">
@@ -208,7 +208,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
               ? "7年创意写作经验，2年游戏制作经验，21年人生经验，致力于创作有趣的事物。"
               : "With 7 years of creative writing, 2 years of game production, and 21 years of life experience, I am committed to making interesting things."}
           </p>
-          <div className="mt-6 grid max-w-2xl gap-3 border border-cyan-300/25 bg-[#081b38]/70 p-4 font-mono text-sm text-cyan-100 sm:grid-cols-3">
+          <div className="mt-4 grid max-w-2xl gap-3 border border-cyan-300/25 bg-[#081b38]/70 p-4 font-mono text-sm text-cyan-100 sm:grid-cols-3">
             <a
               href="tel:18275036417"
               className="grid gap-1 text-cyan-100 no-underline hover:text-pink-200"
@@ -236,7 +236,7 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-3 sm:grid-cols-3">
+        <div className="mt-7 grid gap-3 sm:grid-cols-3">
           {featuredItems.map((item) => (
             <Link
               key={item.key}
