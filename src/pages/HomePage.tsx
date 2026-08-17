@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   assetUrl,
   categoryTabs,
@@ -87,6 +87,7 @@ function FeaturedTitle({ title }: { title: string }) {
 
 export function HomePage({ locale, setLocale }: HomePageProps) {
   const location = useLocation();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] =
     useState<PortfolioCategory>(readStoredActiveTab);
   const activeIndex = categoryTabs.findIndex((tab) => tab.id === activeTab);
@@ -171,12 +172,18 @@ export function HomePage({ locale, setLocale }: HomePageProps) {
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_18%,rgba(34,211,238,0.18),transparent_26%),radial-gradient(circle_at_80%_8%,rgba(244,114,182,0.14),transparent_22%),linear-gradient(rgba(34,211,238,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.035)_1px,transparent_1px)] bg-[size:auto,auto,30px_30px,30px_30px]" />
       <div className="fixed inset-x-0 top-0 z-20 border-b border-cyan-300/20 bg-[#06162f]/88 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
-          <a
-            href="#top"
-            className="font-mono text-sm uppercase tracking-[0.22em] text-cyan-200 no-underline"
+          <button
+            type="button"
+            onClick={() => {
+              navigate("/#top");
+              requestAnimationFrame(() => {
+                window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+              });
+            }}
+            className="border-0 bg-transparent p-0 font-mono text-sm uppercase tracking-[0.22em] text-cyan-200 no-underline"
           >
             CONCRETE ARCHIVE
-          </a>
+          </button>
           <div className="flex border border-cyan-300/30 bg-[#071a35] font-mono text-xs">
             {(["zh", "en"] as const).map((nextLocale) => (
               <button

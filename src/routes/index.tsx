@@ -12,6 +12,12 @@ function ScrollManager() {
   const location = useLocation();
 
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  useEffect(() => {
     requestAnimationFrame(() => {
       if (location.hash === "#works") {
         document
